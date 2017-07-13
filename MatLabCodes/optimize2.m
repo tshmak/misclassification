@@ -16,7 +16,7 @@ function [params, value, exitflag] = optimize2()
         Results.output = output;
         Results.lambda = lambda;
         
-    else if strcmp(setts.algorithm, 'nlopt')
+    elseif strcmp(setts.algorithm, 'nlopt')
         options.algorithm = setts.subalgorithm;
         options.min_objective = @tobeoptimized;
         options.lower_bounds = setts.lowerbound';
